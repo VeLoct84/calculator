@@ -20,8 +20,8 @@ class Calculator:
         """
         converting operator string and return the value num1 and num2
         """
-        x = float(self.num1)
-        y = float(self.num2)
+        x = self.num1
+        y = self.num2
 
         # convert the string operator
         if self.operator == "+":
