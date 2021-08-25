@@ -31,3 +31,6 @@ while True:
         print("-" * 23 + "exit" + "-" * 23)
         break
 
+#TODO
+    # unlimited add number
+    # enhance CLI UI to better view
