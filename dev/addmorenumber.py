@@ -1,22 +1,25 @@
-#TODO check while syntax
-while:
-    """
-    Adding more numbers and result
-    """
-    try:
-        num = []
-        data = input("Insert number:\n")
-        cont = input("add more number? [y/n]")
-        if cont == "y":
-            num.append(data)
-        else:
-            continue
+# addmorenumber.py
+number = []
 
-    # function to total all the numbers
-    def addition():
-        zero = 0
-        for num in addnum:
-            zero += num
-        return zero
+def add_number(numbers):
+    for num in numbers:
+        number.append(num)
+    return number
 
-    print(addition())
+
+while True:
+    # user insert number
+    data = input("Insert number:\n")
+
+    # ask user what next
+    cont = input("add more number? [y/n]")
+    if cont == "y":
+        print(add_number(data))
+    else:
+        print("Program terminated!")
+        break
+
+#TODO to sum all number in number[]
+#ERR the number keyin split inside the list
+    #for example when user input 110 it return [1,1,0]
+    #expectation is [110]
