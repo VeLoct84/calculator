@@ -5,25 +5,38 @@ To get the grand total, user will key in number '0' and the program
 will return result and terminated.
 """
 
-number = []
+class Total:
 
-def add_number(numbers):
-    number.append(numbers)
-    return number
+    
+    def __init__(self):
+        pass
 
+    def add_number(self, number):
+        # create empty list
+        self.number = number
+        number = []
+        
+        number.append(self.number)
+        return number
+
+#############################################
 print("press [0] to see the result")
 
 while True:
     # user insert number
     data = int(input("Insert number:\n"))
-    add_number(data)
+    n = Total()
+    list_num = n.add_number(data)
     
     # showing data entry
-    print(number)
+    print(list_num)
 
     # ask user what next
     if data == 0:
-        total = sum(number)
+        total = sum(list_num)
         print(f"Grand Total: {total}")
         print(50 * "-")
         break
+
+#TODO
+    # find a way to make function add_number() adding list

@@ -10,8 +10,8 @@ while True:
     # UI program
     try:
         num1 = float(input("Insert number 1st: "))
-        num2 = float(input("Insert number 2nd: "))
         operator = input("Insert operator: ")
+        num2 = float(input("Insert number 2nd: "))
 
         app = Calculator(num1, num2, operator)
         print(app.calculate())
