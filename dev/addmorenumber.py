@@ -1,25 +1,29 @@
-# addmorenumber.py
+#! calculator/dev/addmorenumber.py
+"""
+User will key in unlimited number and return grand total as result.
+To get the grand total, user will key in number '0' and the program
+will return result and terminated.
+"""
+
 number = []
 
 def add_number(numbers):
-    for num in numbers:
-        number.append(num)
+    number.append(numbers)
     return number
 
+print("press [0] to see the result")
 
 while True:
     # user insert number
-    data = input("Insert number:\n")
+    data = int(input("Insert number:\n"))
+    add_number(data)
+    
+    # showing data entry
+    print(number)
 
     # ask user what next
-    cont = input("add more number? [y/n]")
-    if cont == "y":
-        print(add_number(data))
-    else:
-        print("Program terminated!")
+    if data == 0:
+        total = sum(number)
+        print(f"Grand Total: {total}")
+        print(50 * "-")
         break
-
-#TODO to sum all number in number[]
-#ERR the number keyin split inside the list
-    #for example when user input 110 it return [1,1,0]
-    #expectation is [110]
