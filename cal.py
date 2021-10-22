@@ -34,3 +34,25 @@ class Calculator:
             result = x / y
 
         return f"{x} {self.operator} {y} = {result}"
+
+
+class Total:
+    """
+    User will key in unlimited number and return grand total as result.
+    To get the grand total, user will key in number '0' and the program
+    will return result and terminated.
+    """
+
+    # create empty list
+    stacklist = []
+
+    def __init__(self):
+        pass
+
+    def add_number(self, number):
+        # create empty list
+        self.number = number
+        
+        self.stacklist.append(self.number)
+        return self.stacklist
+
