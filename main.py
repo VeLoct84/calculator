@@ -1,10 +1,16 @@
 from cal import Calculator, Total
 
+"""
+Simple CLI calculator for two option where selection (a) two number with operator
+and return total result. Selection for (b) user can add unlimited number and return
+grand total.
+# Beta Version 1.0
+"""
 
 # Start program
 while True:
 
-    # Program naming
+    # Program naming and border
     print("-" * 20 + "Calculator" + "-" * 20)
 
     # ask the user to continue the program or not
@@ -15,6 +21,8 @@ while True:
         (q) terminate program
         Your answer: """
     )
+    
+    # border
     print("-" * 50)
 
     if selection == "a":
@@ -42,17 +50,19 @@ while True:
             # showing data entry
             print(list_num)
 
-            # ask user what next
+            # return grand total after key in zero number
             if data == 0:
                 total = sum(list_num)
                 print(f"Grand Total: {total}")
+                # border
                 print("-" * 23 + "exit" + "-" * 23)
                 break
 
-    else:
-        print("Program terminate")
-        break
+    # kill the program
+    elif selection == "q":
+            print("Program terminate")
+            break
 
-# TODO
-# check function "b" selection
-# enhance CLI UI to better view
+    else:
+        print("Wrong selection! Please select again.")
+        continue
